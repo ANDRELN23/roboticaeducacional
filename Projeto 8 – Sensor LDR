@@ -1,0 +1,27 @@
+void setup() {
+  Serial.begin(9600);
+  pinMode(A0, INPUT);
+  pinMode(6, OUTPUT);
+}
+
+void loop() {
+  int ldrReading = analogRead(A0);
+  int ldrAverage = 0;
+
+  // Realiza uma média das últimas 10 leituras do LDR
+  for (int i = 0; i < 10; i++) {
+    ldrAverage += analogRead(A0);
+    delay(10);  // Pequeno atraso entre as leituras
+  }
+  ldrAverage /= 10;
+
+  Serial.println(ldrAverage);
+
+  if (ldrAverage < 650) {
+    digitalWrite(6, HIGH);
+  } else {
+    digitalWrite(6, LOW);
+  }
+
+  delay(100);
+}
