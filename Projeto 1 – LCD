@@ -1,0 +1,23 @@
+#include <LiquidCrystal.h>
+// Inicialize o objeto LiquidCrystal com os pinos corretos
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+void setup() {
+  // Inicialize o display LCD com 16 colunas e 2 linhas
+  lcd.begin(16, 2);
+  // Limpe o display
+  lcd.clear();
+}
+
+void loop() {
+  // Defina a posição do cursor na coluna 0, linha 0
+  lcd.setCursor(0, 0);
+  // Escreva um texto no display
+  lcd.print("Hello, Arduino!");
+  // Aguarde por 2 segundos
+  delay(2000);
+  // Limpe o display
+  lcd.clear();
+  // Aguarde por mais 2 segundos
+  delay(2000);
+}
