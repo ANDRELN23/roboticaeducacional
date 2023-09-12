@@ -1,0 +1,35 @@
+#include <NewPing.h>
+#define TRIGGER_PIN 9
+#define ECHO_PIN 10
+#define MAX_DISTANCE 200 // Distância máxima permitida em centímetros
+#define RED_LED 8
+#define GREEN_LED 7
+
+NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
+
+void setup() {
+  pinMode(RED_LED, OUTPUT);
+  pinMode(GREEN_LED, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  delay(50);
+  unsigned int distance = sonar.ping_cm();
+
+  if (distance <= 0) {
+    Serial.println("Fora de alcance");
+  } else {
+    Serial.print("Distância: ");
+    Serial.print(distance);
+    Serial.println(" cm");
+
+    if (distance < 20) {
+      digitalWrite(RED_LED, HIGH); // Liga o LED vermelho
+      digitalWrite(GREEN_LED, LOW); // Desliga o LED verde
+    } else {
+      digitalWrite(RED_LED, LOW); // Desliga o LED vermelho
+      digitalWrite(GREEN_LED, HIGH); // Liga o LED verde
+    }
+  }
+}
