@@ -1,0 +1,7 @@
+Materiais necessários:
+
+Arduino (qualquer modelo)
+Servo motor
+Potenciômetro
+Fios jumper
+Fonte de alimentação externa para o servo (caso o servo consuma mais corrente do que o Arduino pode fornecer)
