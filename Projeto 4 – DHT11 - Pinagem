@@ -1,0 +1,10 @@
+Roteiro de ligação de pinagem:
+
+Conecte o sensor DHT22 ao Arduino da seguinte maneira:
+
+Conecte o pino VCC do sensor DHT22 a 5V do Arduino.
+Conecte o pino GND do sensor DHT22 a GND do Arduino.
+Conecte o pino de dados (DATA) do sensor DHT22 ao pino digital 8 do Arduino (você definiu isso como pinodht no código).
+Certifique-se de que o Arduino esteja conectado ao computador por meio de um cabo USB.
+
+Agora, você está pronto para carregar o código no Arduino e executá-lo.
