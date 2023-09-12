@@ -1,0 +1,10 @@
+Materiais necessários:
+
+Arduino (qualquer modelo)
+Sensor ultrassônico HC-SR04
+Servo motor
+LEDs (vermelho e verde)
+Buzzer
+Resistor de 220 ohms (ou próximo disso) para cada LED
+Cabos jumper
+Fonte de alimentação externa para o servo (caso o servo consuma mais corrente do que o Arduino pode fornecer)
