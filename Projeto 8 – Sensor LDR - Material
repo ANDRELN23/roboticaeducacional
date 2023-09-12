@@ -1,0 +1,8 @@
+Materiais necessários:
+
+Arduino (qualquer modelo)
+Sensor de luz LDR (Light Dependent Resistor)
+LED
+Resistor de 220 ohms (ou próximo disso) para o LED
+Resistor de pull-down (recomendado, valor típico de 10k ohms) para o LDR
+Cabos jumper
