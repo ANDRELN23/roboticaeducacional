@@ -1,0 +1,60 @@
+ #include <IRremote.h>
+
+int RECV_PIN = 7;
+IRrecv irrecv(RECV_PIN);
+
+const int ledVermelho = 8;
+const int ledVerde = 9;
+const int ledAzul = 10;
+
+long int codTecla1 = 16738455;
+long int codTecla2 = 16750695;
+long int codTecla3 = 16756815;
+
+int stLedVermelho = 0;
+int stLedVerde = 0;
+int stLedAzul = 0;
+
+decode_results results;
+
+void setup(){
+  irrecv.enableIRIn();
+  pinMode(ledVermelho, OUTPUT);
+  pinMode(ledVerde, OUTPUT);
+  pinMode(ledAzul, OUTPUT);
+}
+
+void loop() {
+  if (irrecv.decode(&results)) {
+    if (results.value == codTecla1) {
+      if (stLedVermelho == 0) {
+        digitalWrite(ledVermelho, HIGH);
+        stLedVermelho = 1;
+      } else {
+        digitalWrite(ledVermelho, LOW);
+        stLedVermelho = 0;
+      }
+      delay(500);  // Adiciona um atraso de 500 ms após a ação
+    } else if (results.value == codTecla2) {
+      if (stLedVerde == 0) {
+        digitalWrite(ledVerde, HIGH);
+        stLedVerde = 1;
+      } else {
+        digitalWrite(ledVerde, LOW);
+        stLedVerde = 0;
+      }
+      delay(500);  // Adiciona um atraso de 500 ms após a ação
+    } else if (results.value == codTecla3) {
+      if (stLedAzul == 0) {
+        digitalWrite(ledAzul, HIGH);
+        stLedAzul = 1;
+      } else {
+        digitalWrite(ledAzul, LOW);
+        stLedAzul = 0;
+      }
+      delay(500);  // Adiciona um atraso de 500 ms após a ação
+    }
+    irrecv.resume();
+  }
+  delay(10);
+}
