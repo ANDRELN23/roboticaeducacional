@@ -1,0 +1,20 @@
+Aqui está o esquema de ligação:
+
+Pinagem do Display LCD:
+
+VSS (GND) -> GND do Arduino.
+VDD (VCC) -> 5V do Arduino.
+VO (Contraste) -> Conecte ao potenciômetro de 10k ohms:
+Um terminal ao GND do Arduino.
+O outro terminal ao 5V do Arduino.
+O terminal central do potenciômetro ao VO do LCD.
+RS (Register Select) -> Pino digital 12 do Arduino.
+RW (Read/Write) -> GND do Arduino (modo escrita).
+E (Enable) -> Pino digital 11 do Arduino.
+D4 -> Pino digital 5 do Arduino.
+D5 -> Pino digital 4 do Arduino.
+D6 -> Pino digital 3 do Arduino.
+D7 -> Pino digital 2 do Arduino.
+A (Anodo) do backlight -> 5V do Arduino.
+K (Catodo) do backlight -> GND do Arduino.
+Agora, vamos ao código Arduino para exibir um texto no display LCD. Certifique-se de ter a biblioteca "LiquidCrystal" instalada no seu Arduino IDE. Você pode instalá-la através do menu "Sketch" -> "Incluir Biblioteca" -> "Gestor de Bibliotecas" e procurando por "LiquidCrystal".
