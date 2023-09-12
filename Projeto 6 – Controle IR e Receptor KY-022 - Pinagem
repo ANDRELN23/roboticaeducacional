@@ -1,0 +1,15 @@
+Roteiro de ligação de pinagem:
+
+Conecte o módulo receptor de infravermelho (KY-022) ao Arduino da seguinte maneira:
+
+Conecte o pino OUT do KY-022 ao pino digital 7 do Arduino (RECV_PIN).
+Conecte o pino GND do KY-022 ao GND do Arduino.
+Conecte o pino VCC do KY-022 ao 5V do Arduino.
+Conecte os LEDs ao Arduino:
+
+Conecte o LED vermelho ao pino 8 do Arduino através de um resistor de 220 ohms.
+Conecte o LED verde ao pino 9 do Arduino através de um resistor de 220 ohms.
+Conecte o LED azul ao pino 10 do Arduino através de um resistor de 220 ohms.
+Certifique-se de que o Arduino esteja conectado ao computador por meio de um cabo USB.
+
+Agora, você está pronto para carregar o código no Arduino e executá-lo.
