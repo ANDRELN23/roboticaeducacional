@@ -1,0 +1,17 @@
+Roteiro de ligação de pinagem:
+
+Conecte o servo motor ao Arduino:
+
+Conecte o fio vermelho (positivo) do servo ao +5V do Arduino (ou à fonte de alimentação externa).
+Conecte o fio marrom (negativo) do servo ao GND do Arduino (ou à fonte de alimentação externa).
+Conecte o fio laranja (sinal) do servo ao pino analógico 5 do Arduino.
+Conecte o potenciômetro ao Arduino:
+
+Conecte um terminal do potenciômetro ao +5V do Arduino.
+Conecte o outro terminal do potenciômetro ao GND do Arduino.
+Conecte o terminal do meio do potenciômetro ao pino analógico 0 do Arduino.
+Certifique-se de que o Arduino esteja conectado ao computador por meio de um cabo USB.
+
+Se o servo consumir mais corrente do que o Arduino pode fornecer, conecte uma fonte de alimentação externa ao servo, conectando o positivo e o negativo da fonte aos terminais correspondentes do servo e garantindo que o GND da fonte esteja conectado ao GND do Arduino para manter uma referência comum.
+
+Agora, você está pronto para carregar o código no Arduino e executá-lo.
