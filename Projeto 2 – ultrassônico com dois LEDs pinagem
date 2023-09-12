@@ -1,0 +1,12 @@
+Aqui está um exemplo de código e esquema de ligação para um sensor ultrassônico com dois LEDs (verde e vermelho) usando um Arduino. Este código usa a biblioteca "NewPing" para facilitar a medição da distância com o sensor ultrassônico. Certifique-se de instalar essa biblioteca no seu ambiente de desenvolvimento Arduino antes de usar o código.
+
+Esquema de ligação:
+
+Conecte o pino VCC do sensor ultrassônico ao 5V do Arduino.
+Conecte o pino GND do sensor ultrassônico ao GND do Arduino.
+Conecte o pino TRIG do sensor ultrassônico ao pino 9 do Arduino.
+Conecte o pino ECHO do sensor ultrassônico ao pino 10 do Arduino.
+Conecte o catodo (perna mais curta) do LED verde a um resistor de 330 ohms e, em seguida, conecte o resistor ao pino 7 do Arduino.
+Conecte o anodo (perna mais longa) do LED verde ao GND do Arduino (via resistor).
+Conecte o catodo (perna mais curta) do LED vermelho a um resistor de 330 ohms e, em seguida, conecte o resistor ao pino 8 do Arduino.
+Conecte o anodo (perna mais longa) do LED vermelho ao GND do Arduino (via resistor).
