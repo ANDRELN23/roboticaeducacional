@@ -1,0 +1,14 @@
+Roteiro de ligação de pinagem:
+
+Conecte o LED ao Arduino e ao resistor da seguinte maneira:
+
+Conecte o anodo (perna longa) do LED ao pino 12 (ou outro pino digital de sua escolha) do Arduino.
+Conecte o catodo (perna curta) do LED ao resistor de 220 ohms.
+Conecte a outra extremidade do resistor ao GND do Arduino.
+Conecte o sensor analógico (por exemplo, um LDR) ao Arduino:
+
+Conecte um terminal do sensor analógico ao pino A0 do Arduino.
+Conecte o outro terminal do sensor ao GND do Arduino.
+Certifique-se de que o Arduino esteja conectado ao computador por meio de um cabo USB.
+
+Agora, você está pronto para carregar o código no Arduino e executá-lo.
