@@ -1,0 +1,9 @@
+Materiais necessários:
+
+Arduino (qualquer modelo)
+Buzzer passivo
+Botão (push-button)
+LED
+Resistor de 220 ohms (ou próximo disso) para o LED
+Resistor de pull-up (recomendado, valor típico de 10k ohms) para o botão
+Cabos jumper
