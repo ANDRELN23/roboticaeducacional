@@ -1,0 +1,18 @@
+Roteiro de ligação de pinagem:
+
+Conecte o buzzer ao Arduino:
+
+Conecte um pino do buzzer ao pino 9 (buzzerPin) do Arduino.
+Conecte o outro pino do buzzer ao GND do Arduino.
+Conecte o botão ao Arduino:
+
+Conecte um terminal do botão ao GND do Arduino.
+Conecte o outro terminal do botão ao pino 7 (botaoPin) do Arduino.
+Conecte um resistor de pull-up de 10k ohms (ou próximo disso) entre o pino 7 (botaoPin) e o 5V do Arduino.
+Conecte o LED ao Arduino:
+
+Conecte o anodo (perna mais longa) do LED ao pino 6 (ledPin) do Arduino através de um resistor de 220 ohms.
+Conecte o catodo (perna mais curta) do LED ao GND do Arduino.
+Certifique-se de que o Arduino esteja conectado ao computador por meio de um cabo USB.
+
+Agora, você está pronto para carregar o código no Arduino e executá-lo.
