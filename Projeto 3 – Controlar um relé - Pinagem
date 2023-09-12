@@ -1,0 +1,12 @@
+Roteiro de ligação de pinagem:
+
+Conecte o Arduino ao seu computador por meio de um cabo USB.
+
+Conecte o módulo de relé ao Arduino e à carga (dispositivo elétrico) da seguinte maneira:
+
+Conecte o pino VCC do módulo de relé a uma fonte de alimentação externa se a carga requer mais corrente do que o Arduino pode fornecer. Caso contrário, você pode conectar o pino VCC diretamente ao 5V do Arduino.
+Conecte o pino GND do módulo de relé ao GND do Arduino.
+Conecte o pino IN1 do módulo de relé ao pino digital 6 do Arduino.
+Conecte a carga (dispositivo elétrico) aos terminais NO (Normalmente Aberto) e COM (Comum) do relé no módulo de relé. Certifique-se de que a fonte de alimentação externa (se usada) esteja conectada corretamente à carga.
+
+Agora, você está pronto para carregar o código no Arduino e executá-lo.
