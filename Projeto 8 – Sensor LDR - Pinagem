@@ -1,0 +1,14 @@
+Roteiro de ligação de pinagem:
+
+Conecte o sensor LDR ao Arduino da seguinte maneira:
+
+Conecte um terminal do LDR ao GND do Arduino.
+Conecte o outro terminal do LDR ao pino A0 do Arduino.
+Conecte um resistor de pull-down de 10k ohms entre o pino A0 do Arduino e o GND.
+Conecte o LED ao Arduino:
+
+Conecte o anodo (perna longa) do LED ao pino 6 do Arduino através de um resistor de 220 ohms.
+Conecte o catodo (perna curta) do LED ao GND do Arduino.
+Certifique-se de que o Arduino esteja conectado ao computador por meio de um cabo USB.
+
+Agora, você está pronto para carregar o código no Arduino e executá-lo.
