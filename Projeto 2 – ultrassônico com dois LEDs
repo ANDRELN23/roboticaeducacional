@@ -1,35 +1,53 @@
-#include <NewPing.h>
-#define TRIGGER_PIN 9
-#define ECHO_PIN 10
-#define MAX_DISTANCE 200 // Distância máxima permitida em centímetros
-#define RED_LED 8
-#define GREEN_LED 7
+// Define os pinos para o sensor ultrassônico
+const int trigPin = 9;  // Pino do trigger
+const int echoPin = 10; // Pino do echo
 
-NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
+// Define os pinos para os LEDs
+const int greenLedPin = 6;   // Pino do LED verde
+const int redLedPin = 7;     // Pino do LED vermelho
+
+// Define variáveis para armazenar o tempo de viagem do ultrassom e a distância
+long duration;
+int distance;
 
 void setup() {
-  pinMode(RED_LED, OUTPUT);
-  pinMode(GREEN_LED, OUTPUT);
+  // Inicializa os pinos
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(greenLedPin, OUTPUT);
+  pinMode(redLedPin, OUTPUT);
+
+  // Inicializa a comunicação serial
   Serial.begin(9600);
 }
 
 void loop() {
-  delay(50);
-  unsigned int distance = sonar.ping_cm();
+  // Gera um pulso no pino de trigger do sensor ultrassônico
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
 
-  if (distance <= 0) {
-    Serial.println("Fora de alcance");
+  // Mede o tempo de viagem do ultrassom
+  duration = pulseIn(echoPin, HIGH);
+
+  // Calcula a distância em centímetros
+  distance = duration * 0.034 / 2;
+
+  // Exibe a distância no monitor serial
+  Serial.print("Distancia: ");
+  Serial.println(distance);
+
+  // Verifica a distância e aciona os LEDs
+  if (distance < 20) {
+    digitalWrite(greenLedPin, LOW);
+    digitalWrite(redLedPin, HIGH); // Acende o LED vermelho
   } else {
-    Serial.print("Distância: ");
-    Serial.print(distance);
-    Serial.println(" cm");
-
-    if (distance < 20) {
-      digitalWrite(RED_LED, HIGH); // Liga o LED vermelho
-      digitalWrite(GREEN_LED, LOW); // Desliga o LED verde
-    } else {
-      digitalWrite(RED_LED, LOW); // Desliga o LED vermelho
-      digitalWrite(GREEN_LED, HIGH); // Liga o LED verde
-    }
+    digitalWrite(greenLedPin, HIGH); // Acende o LED verde
+    digitalWrite(redLedPin, LOW);
   }
+
+  // Aguarda um curto período antes de fazer a próxima leitura
+  delay(1000);
 }
